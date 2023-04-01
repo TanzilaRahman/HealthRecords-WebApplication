@@ -1,0 +1,149 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>records</title>
+{% endblock%}
+
+
+
+{% block body %} 
+<h1>Patient Health Records</h1>
+
+<hr>
+<h2>Add New Patient Information:</h2>
+<form action = '/records' method = 'POST' >
+
+    <div class="form-row">
+
+        <div class="col">
+            <label for="FirstName">FirstName</label>  
+            <input class="form-control" type="text" name = "FirstName" id = "FirstName">
+        </div>
+        <div class="col">
+            <label for="LastName">LastName</label> 
+            <input class="form-control" type = "text" name = "LastName" id = "LastName">
+        </div>
+
+
+        <div class="col">
+            <label for="DOB">Date of Birth</label>
+             <input class="form-control" type = "text" name = "DOB" id = "DOB">
+
+        </div>
+
+    </div>
+   
+
+    <div class="form-row">
+        <div class="col">
+           <label for="Height">Height</label> 
+            <input class="form-control" type = "text" name = "Height" id = "Height">
+        </div>
+        <div class="col">
+            <label for="Weight">Weight</label> 
+            <input class="form-control" type = "text" name = "Weight" id = "Weight">
+        </div>
+        <div class="col">
+            <label for="Phone">Phone</label> 
+            Phone: <input class="form-control"  type = "text" name = "Phone" id = "Phone">
+        </div>
+
+    </div>
+    
+    
+    <div class="form-row">
+        <div class="col">
+            <label for="Address">Address</label> 
+            <input class="form-control"  type = "text" name = "Address" id = "Address">
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="col">
+            <label for="Insurance_Name">Insurance Name</label> 
+            <input  class="form-control" type = "text" name = "Insurance_Name" id = "Insurance_Name">
+        </div>
+        <div class="col">
+            <label for="Insurance_Id">Insurance Id</label> 
+            <input  class="form-control" type = "text" name = "Insurance_Id" id = "Insurance_Id">
+        </div>
+        <div class="col">
+            <label for="Allergies">Allergies</label> 
+            <input  class="form-control" type = "text" name = "Allergies" id = "Allergies">
+        </div>
+
+    </div>
+
+    <div class="form-row">
+        <div class="col">
+            <label for="Health_Concerns">Health Concerns</label> 
+            <input class="form-control"  type = "text" name = "Health_Concerns" id = "Health_Concerns">
+        </div>
+        <div class="col">
+            <label for="Note">Note</label> 
+            <input  class="form-control" type = "text" name = "Note" id = "Note">
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="col">
+            <label for="Health_Records">Health Records</label> 
+            <input  class="form-control" type = "text" name = "Health_Records" id = "Health_Records">
+        </div>
+        <div class="col">
+            <label for="Prescribed_Drugs">Prescribed Drugs</label> 
+            <input  class="form-control" type = "text" name = "Prescribed_Drugs" id = "Prescribed_Drugs">
+        </div>
+
+    </div>
+
+    <div class="form-row">
+        <div class="col">
+            <label for="Last_visited">Last visited</label> 
+            <input  class="form-control" type = "text" name = "Last_visited" id = "Last_visited">
+        </div>
+        <div class="col">
+            <label for="Next_appointment">Next Appointment</label> 
+            Next appointment: <input  class="form-control" type = "text" name = "Next_appointment" id = "Next_appointment">
+        </div>
+    </div>
+    <br>
+ 
+    <input class = "btn btn-primary" type = "submit" value = "Add"> 
+
+</form>
+<hr>
+<h1>All Patient's Health Records:</h1>
+
+{% for records in all_records %}
+<div>
+    <small>Last updated on {{records.date_added}}</small>
+
+    <p class="FirstName" > First Name: {{records.FirstName}}</p>
+    <p class="LastName" > Last Name: {{records.LastName}}</p>
+    <p class="DOB" > Date Of Birth: {{records.DOB}}</p>
+    <p class="Height" > Height: {{records.Height}}</p>
+    <p class="Weight" > Weight: {{records.Weight}}</p>
+    <p class="Phone" > Phone: {{records.Phone}}</p>
+    <p class="Address" > Address: {{records.Address}}</p>
+    <p class="Insurance_Name" > Insurance Name: {{records.Insurance_Name}}</p>
+    <p class="Insurance_Id" > Insurance Id: {{records.Insurance_Id}}</p>
+
+    <p class="Allergies" > Allergies: {{records.Allergies}}</p>
+    <p class="Health_Concerns" > Health Concerns: {{records.Health_Concerns}}</p>
+    <p class="Note" > Note: {{records.Note}}</p>
+    <p class="Health_Records" > Health Records: {{records.Health_Records}}</p>
+    <p class="Prescribed_Drugs" > Prescribed Drugs: {{records.Prescribed_Drugs}}</p>
+
+    <p class="Last_visited" > Last Visited: {{records.Last_visited}}</p>
+    <p class="Next_appointment" > Next Appointment: {{records.Next_appointment}}</p>
+
+    <a class = "btn btn-primary" href = '/records/edit/{{records.id}}'>Edit</a>
+    <a class = "btn btn-danger" href = '/records/delete/{{records.id}}'>Delete</a>
+
+    <br>
+
+</div>
+<hr>
+{%endfor%}
+{% endblock%}

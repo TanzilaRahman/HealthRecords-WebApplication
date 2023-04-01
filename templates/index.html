@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Home</title>
+{% endblock%}
+
+
+
+{% block body %} 
+<br>
+<h2>Home</h2>
+<br>
+
+<main role="main">
+    <div class="jumbotron">
+        <div class="col-sm-8 mx-auto">
+            <h1>
+                Health Record Web Application
+            </h1>
+            <p>
+                Welcome to the Health Record System created by Tanzila Rahman, that lets the user record important 
+                Patient information for easy access. It's a full-stack web application created using Python Flask, with
+                full CRUD functionality. Users/Physicians can add new Patient information,
+                as well as Read, Update, Delete Health records. 
+               <br>
+                
+            </p>
+            <a class="btn btn-primary" href="/records" role="button">View/Add New Patient Records &raquo;</a>
+        </div>
+    </div>
+</main>
+
+
+{% endblock%}

@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Edit records </title>
+{% endblock%}
+
+{% block body %} 
+<h2>Editing Health Records: </h2>
+
+<form action = '/records/edit/{{records.id}}' method = 'POST' >
+
+    <div class="form-row">
+
+        <div class="col">
+            <label for="FirstName">FirstName</label>  
+            <input class="form-control" type= "text" name = "FirstName" id = "FirstName" value = "{{records.FirstName}}">
+        </div>
+        <div class="col">
+            <label for="LastName">LastName</label> 
+            <input class="form-control" type = "text" name = 'LastName' id = 'LastName' value = "{{records.LastName}}">
+        </div>
+
+        <div class="col">
+            <label for="DOB">Date of Birth</label>
+            <input class="form-control" type = "text" name = 'DOB' id = 'DOB'  value = "{{records.DOB}}" >
+        </div>
+
+    </div>
+
+    <div class="form-row">
+        <div class="col">
+            <label for="Height">Height</label> 
+            <input class="form-control" type = "text" name = "Height" id = "Height" value = "{{records.Height}}">
+        </div>
+        <div class="col">
+            <label for="Weight">Weight</label> 
+            <input class="form-control" type = "text" name = "Weight" id = "Weight" value = "{{records.Weight}}">
+        </div>
+        <div class="col">
+            <label for="Phone">Phone</label> 
+            <input class="form-control"  type = "text" name = "Phone" id = "Phone"  value = "{{records.Phone}}">
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <label for="Address">Address</label> 
+        <input class="form-control"  type = "content" name = "Address" id = "Address" value = "{{records.Address}}">
+    </div>
+
+
+
+    <div class="form-row">
+        <div class="col">
+            <label for="Insurance_Name">Insurance Name</label> 
+            <input  class="form-control" type = "text" name = "Insurance_Name" id = "Insurance_Name"value = "{{records.Insurance_Name}}">
+        </div>
+        <div class="col">
+            <label for="Insurance_Id">Insurance Id</label> 
+            <input  class="form-control" type = "text" name = "Insurance_Id" id = "Insurance_Id" value = "{{records.Insurance_Id}}">
+        </div>
+        <div class="col">
+            <label for="Allergies">Allergies</label> 
+            <input  class="form-control" type = "text" name = "Allergies" id = "Allergies" value = "{{records.Allergies}}" >
+        </div>
+
+    </div>
+
+    <div class="form-row">
+        <div class="col">
+            <label for="Health_Concerns">Health Concerns</label> 
+            <input class="form-control"  type = "text" name = "Health_Concerns" id = "Health_Concerns" value = "{{records.Health_Concerns}}"> 
+        </div>
+        <div class="col">
+            <label for="Note">Note</label> 
+            <input  class="form-control" type = "text" name = "Note" id = "Note" value = "{{records.Note}}" >
+        </div>
+    </div>
+    
+    <div class="form-row">
+        <div class="col">
+            <label for="Health_Records">Health Records</label> 
+            <input  class="form-control" type = "text" name = "Health_Records" id = "Health_Records" value = "{{records.Health_Records}}" >
+        </div>
+        <div class="col">
+            <label for="Prescribed_Drugs">Prescribed Drugs</label> 
+            <input  class="form-control" type = "text" name = "Prescribed_Drugs" id = "Prescribed_Drugs" value = "{{records.Prescribed_Drugs}}">
+        </div>
+
+    </div>
+
+    <div class="form-row">
+        <div class="col">
+            <label for="Last_visited">Last visited</label> 
+            <input  class="form-control" type = "text" name = "Last_visited" id = "Last_visited" value = "{{records.Last_visited}}">
+        </div>
+        <div class="col">
+            <label for="Next_appointment">Next Appointment</label> 
+            <input  class="form-control" type = "text" name = "Next_appointment" id = "Next_appointment" value = "{{records.Next_appointment}}" >
+        </div>
+    </div>
+    <br>
+ 
+    <input class = "btn btn-primary" type = "submit" value = "Add">
+    <hr>
+    
+</form>
+
+
+
+{% endblock %}
