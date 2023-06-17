@@ -1,8 +1,8 @@
 # HealthRecords-WebApplication
 A Full-Stack web application that lets the user record important Patient information for easy access. It's created using Python Flask, with full CRUD functionality.
 
-##Description:
-Users can add the following informations about the patient: 
+## Description:
+From the Home page, after clicking "View/Add New Patient Record", Users can add the following informations about the patient: 
 - FirsName
 - LastName
 - DOB
