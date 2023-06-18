@@ -32,13 +32,12 @@ From the Home page, after clicking "View/Add New Patient Record", Users can add 
 - Last Visited 
 - Next Appointment
 
-Clicking the **SAVE** button will save the information of the patient and it will be listed in the same page, under **All Patient's Health Records**
+### Buttons
+- Clicking the **SAVE** button will save the information of the patient and it will be listed in the same page, under **All Patient's Health Records**
 
-### Edit
 - Clicking the **Edit** button, users can change the existing information about each patients
 
-### Delete
-- Clicking the delete button will delete all records of the patient parmanently. 
+- Clicking the **delete** button will delete all records of the patient parmanently. 
 
 
 
