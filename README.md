@@ -1,7 +1,10 @@
 # HealthRecords-WebApplication
 A Full-Stack web application that lets the user record important Patient information for easy access. It's created using Python Flask, with full CRUD functionality.
 
-## Description and Use:
+## DEMO GIF's and Description:
+
+![Kapture 2023-06-17 at 22 14 18](https://github.com/TanzilaRahman/HealthRecords-WebApplication/assets/110073037/db8c25cc-4d01-4da1-b6bc-a13856a2d679)
+
 
 ### Navigation Bar
 - Clicking on the top left corner will take the users to the home page of the application. 
